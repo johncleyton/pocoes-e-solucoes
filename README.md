@@ -1,4 +1,4 @@
-# Poções e Soluções — Loja da Merigold
+# Poções e Soluções - Loja da Merigold
 
 Website de vendas da loja **Poções e Soluções**, para a disciplina de Desenvolvimento Web
 
