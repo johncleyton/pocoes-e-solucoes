@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Administração da loja Poções e Soluções — Cadastrar e remover poções.">
+  <title>Administração | Poções e Soluções</title>
+  <link rel="icon" href="https://gamepedia.cursecdn.com/minecraft_gamepedia/b/b6/Bottle_o'_Enchanting_JE2_BE2.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="https://gamepedia.cursecdn.com/minecraft_gamepedia/b/b6/Bottle_o'_Enchanting_JE2_BE2.png" alt="Poção"
+          class="logo-icon" style="width: 32px; height: 32px; object-fit: contain;">
+        <span class="logo-text">Poções <span>e Soluções</span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">← Voltar à Loja</a></li>
+          <li><span id="admin-user" style="color: var(--text-secondary); font-size: 0.9rem;"></span></li>
+          <li><a href="#" id="btn-logout" style="color: var(--accent);">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Painel de Administração</h1>
+    <p class="subtitle">Cadastre novas poções ou remova as existentes.</p>
+  </section>
+
+  <!-- ADMIN CONTENT -->
+  <div class="admin-container">
+
+    <!-- ALERTS -->
+    <div id="alert-success" class="alert alert-success"></div>
+    <div id="alert-error" class="alert alert-error"></div>
+
+    <!-- FORM -->
+    <div class="admin-form">
+      <h2>Cadastrar Nova Pocao</h2>
+      <form id="potion-form">
+        <div class="form-group">
+          <label for="nome">Nome da Poção *</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Poção da Invisibilidade" required>
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição *</label>
+          <textarea id="descricao" name="descricao" placeholder="Descreva os efeitos e propriedades da poção..."
+            required></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="imagem">URL da Imagem</label>
+            <input type="text" id="imagem" name="imagem" placeholder="https://exemplo.com/imagem.png">
+          </div>
+          <div class="form-group">
+            <label for="preco">Preço (moedas) *</label>
+            <input type="number" id="preco" name="preco" min="1" placeholder="Ex: 250" required>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit" id="btn-cadastrar">Cadastrar Poção</button>
+      </form>
+    </div>
+
+    <!-- TABLE -->
+    <div class="admin-table-wrap">
+      <h2>Pocoes Cadastradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody id="potions-table-body">
+          <tr>
+            <td colspan="6" class="loading">Carregando poções</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contato">
+    <div class="footer-contact-container">
+      <h2 class="section-title"
+        style="border-bottom: none; display: inline-block; padding-bottom: 0.2rem; border-bottom: 2px solid var(--gold);">
+        Contato</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>Endereço</h4>
+          <p>Beco da Última Saída, nº 42<br>Mundo Mágico</p>
+        </div>
+        <div class="contact-card">
+          <h4>Email e Telefone</h4>
+          <p>Coruja-mail: merigold@pocoes.magicas<br>Bola de cristal: (19) 3342-8859</p>
+        </div>
+        <div class="contact-card">
+          <h4>Horário de funcionamento</h4>
+          <p>Segunda a Sexta: 9h — 18h<br>Sábado: 10h — 14h</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Pocoes e Solucoes - Todos os direitos reservados. Feito por Fred.
+    </div>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>
