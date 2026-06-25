@@ -19,7 +19,7 @@ Website de vendas da loja **Poções e Soluções**, para a disciplina de Desenv
 
 ```bash
 # Clone o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/johncleyton/pocoes-e-solucoes/
 cd LojaPocoes
 
 # Instale as dependências
