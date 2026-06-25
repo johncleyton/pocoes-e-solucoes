@@ -39,4 +39,4 @@ O servidor será iniciado em **http://localhost:3000**.
 
 ### Banco de Dados
 
-O banco SQLite roda **em memória** — os dados são recarregados com poções de exemplo a cada reinício do servidor.
+O banco SQLite roda **em memória** os dados são recarregados com poções de exemplo a cada reinício do servidor, além das poções adicionadas durante a execução são apagar ao fechar e abrir o servidor novamente.
