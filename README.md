@@ -1,6 +1,6 @@
 # Poções e Soluções — Loja da Merigold
 
-Website de vendas da loja **Poções e Soluções**, de propriedade de Annabelle Merigold, localizada no Beco da Última Saída.
+Website de vendas da loja **Poções e Soluções**, para a disciplina de Desenvolvimento Web
 
 ## Tecnologias
 
@@ -19,7 +19,7 @@ Website de vendas da loja **Poções e Soluções**, de propriedade de Annabelle
 
 ```bash
 # Clone o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/johncleyton/pocoes-e-solucoes/
 cd LojaPocoes
 
 # Instale as dependências
@@ -39,44 +39,4 @@ O servidor será iniciado em **http://localhost:3000**.
 
 ### Banco de Dados
 
-O banco SQLite roda **em memória** — os dados são recarregados com poções de exemplo a cada reinício do servidor.
-
-## Estrutura do Projeto
-
-```
-LojaPocoes/
-├── server.js              # Servidor Express + API REST + Sequelize
-├── package.json
-├── README.md
-└── public/                # Arquivos estáticos servidos pelo Express
-    ├── index.html         # Página da loja (cliente)
-    ├── admin.html         # Página de administração
-    ├── css/
-    │   ├── style.css      # Estilos gerais (dark theme, Gill Sans)
-    │   └── admin.css      # Estilos da página de administração
-    └── js/
-        ├── app.js         # JavaScript da loja (AJAX para listar poções)
-        └── admin.js       # JavaScript do admin (CRUD via AJAX)
-```
-
-## API REST
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| GET | `/api/pocoes` | Lista todas as poções |
-| GET | `/api/pocoes/:id` | Busca poção por ID |
-| POST | `/api/pocoes` | Cadastra nova poção |
-| DELETE | `/api/pocoes/:id` | Remove uma poção |
-
-### Campos da Poção
-
-| Campo | Tipo | Obrigatório |
-|-------|------|-------------|
-| `nome` | string | Sim |
-| `descricao` | string | Sim |
-| `imagem` | string (URL) | Não |
-| `preco` | number | Sim |
-
-## Autor
-
-Desenvolvido para Annabelle Merigold — Poções e Soluções, desde 1867.
+O banco SQLite roda **em memória** os dados são recarregados com poções de exemplo a cada reinício do servidor, além das poções adicionadas durante a execução são apagar ao fechar e abrir o servidor novamente.
