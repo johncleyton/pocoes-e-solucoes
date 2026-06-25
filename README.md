@@ -1,6 +1,6 @@
 # Poções e Soluções — Loja da Merigold
 
-Website de vendas da loja **Poções e Soluções**, de propriedade de Annabelle Merigold, localizada no Beco da Última Saída.
+Website de vendas da loja **Poções e Soluções**, para a disciplina de Desenvolvimento Web
 
 ## Tecnologias
 
